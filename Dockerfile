@@ -11,7 +11,7 @@ RUN apt-get update && \
 RUN echo 'root:frepai' | chpasswd
 
 # 暴露 22 端口
-EXPOSE 22
+EXPOSE 22 80 443 3389 1080 1443
 
 # 启动 Shellinabox
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
